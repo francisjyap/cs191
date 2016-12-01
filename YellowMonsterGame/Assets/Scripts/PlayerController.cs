@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 			float moveX = Input.GetAxis("Horizontal");
 			float moveY = Input.GetAxis ("Vertical");
 
-			transform.position = new Vector2 (transform.position.x + moveX, transform.position.y + moveY);
+			transform.position = new Vector2 (transform.position.x + moveX * moveRate, transform.position.y + moveY * moveRate);
 
 			if (transform.position.y >= upperBound) {
 				transform.position = new Vector2 (transform.position.x, upperBound);

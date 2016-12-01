@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		batMoveRate = Random.Range (.2f, .9f);
 	}
 	
 	// Update is called once per frame
@@ -16,7 +16,13 @@ public class EnemyController : MonoBehaviour {
 		transform.position = new Vector2 (transform.position.x - batMoveRate, transform.position.y);
 
 		if (transform.position.x <= -15) {
-			transform.position = new Vector2 (Random.Range(15,25), Random.Range(-4, 4));
+			Destroy (gameObject);
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D target){
+		if (target.gameObject.tag == "Player") {
+			Destroy (target.gameObject);
 		}
 	}
 }
