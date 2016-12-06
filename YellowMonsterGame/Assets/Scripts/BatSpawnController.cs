@@ -7,7 +7,7 @@ public class BatSpawnController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating("GenerateBat", 0, .6f);
+		InvokeRepeating("GenerateBat", 0, .8f);
 	}
 	
 	// Update is called once per frame

@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		batMoveRate = Random.Range (.2f, .9f);
+		batMoveRate = Random.Range (.2f, .4f);
 	}
 	
 	// Update is called once per frame
